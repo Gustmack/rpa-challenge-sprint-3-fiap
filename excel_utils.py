@@ -1,11 +1,27 @@
 import os
 import openpyxl
 from typing import List, Dict
-# Função para salvar os dados no Excel
+
 
 
 def salvar_dados_no_excel(nome_empresa: str, avaliacao: str, total_avaliacoes: str, salario: str, vagas: str,
                           entrevistas: str, beneficios: str, detalhes: Dict[str, List[str]]):
+    """
+    Salva os dados gerais e avaliações detalhadas de uma empresa no arquivo Excel 'infojobs_empresas.xlsx'.
+
+    Args:
+        nome_empresa (str): Nome da empresa avaliada.
+        avaliacao (str): Avaliação geral da empresa (número de estrelas).
+        total_avaliacoes (str): Total de avaliações recebidas pela empresa.
+        salario (str): Faixa salarial média da empresa.
+        vagas (str): Quantidade de vagas abertas na empresa.
+        entrevistas (str): Avaliações de entrevistas realizadas na empresa.
+        beneficios (str): Benefícios oferecidos pela empresa.
+        detalhes (Dict[str, List[str]]): Avaliações detalhadas da empresa contendo título, score, comentário, prós, contras e melhorias.
+
+    Retorna:
+        None
+    """
     # Obter o caminho absoluto da pasta atual do projeto
     caminho_arquivo = os.path.join(os.getcwd(), 'infojobs_empresas.xlsx')
 

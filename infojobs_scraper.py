@@ -12,6 +12,16 @@ from utils import remover_acentos, similaridade
 
 # Função para abrir o navegador, buscar os dados e salvar em Excel
 def abrir_navegador_e_interagir_com_site(url: str, nome_empresa: str):
+    """
+    Abre o navegador, busca informações sobre a empresa no site InfoJobs e salva os dados coletados em um arquivo Excel.
+
+    Args:
+        url (str): URL do site InfoJobs.
+        nome_empresa (str): Nome da empresa a ser pesquisada.
+
+    Retorna:
+        None
+    """
     # Configuração do Selenium WebDriver
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.get(url)
